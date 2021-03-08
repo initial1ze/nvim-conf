@@ -1,6 +1,6 @@
 " Airline config
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'ayu_dark'
 let g:airline#extensions#tabline#enabled = 1
 
 if !exists('g:airline_symbols')

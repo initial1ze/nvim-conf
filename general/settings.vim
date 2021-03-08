@@ -41,11 +41,16 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 " You can't stop me
 cmap w!! w !sudo tee %
 
-
-
 " Executeables
 let g:python3_host_prog = '/bin/python3'
 let g:node_host_prog = 'bin/node'
+
+" Enable bracket colorizer
+" let g:rainbow_active = 1 
+" Some config
+" let g:rainbow_conf = {
+"   'parentheses': ['start=/{/ end=/}/ fold']
+" }
 
 " Auto format buffers
 augroup autoformat_settings

@@ -126,15 +126,15 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 "Terminal options
-nnoremap \ :vsplit term://zsh<enter>:startinsert<enter>
+nnoremap \ :term<enter>:startinsert<enter>
 tnoremap <Esc> <C-\><C-n>
 
 nnoremap <C-c> :bd<CR>
 
 
 " Compiling stuff
-nnoremap <F8> :!g++ -o %:r % -std=c++11<Enter>
-nnoremap <F9> :!g++ -o  %:r % -std=c++11<Enter> \| :!./%:r<Enter>
+nnoremap <F8> :!g++ -o %:r % <Enter>
+nnoremap <F9> :!g++ -o  %:r % <Enter> \| :!.%:r < %:r.input<Enter>
 
 
 
@@ -145,3 +145,5 @@ nnoremap ;; :Format<CR>
 " nnoremap <leader>. :wq<CR>
 
 au BufWrite * :Format
+
+nnoremap cpa <Esc>gg<S-v><S-g>y

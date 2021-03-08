@@ -33,20 +33,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Surround support
     " TODO: config the keymappings
     Plug 'tpope/vim-surround'
-    " Ranger file manager
-    " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}    
-    
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
-
     " Some more themes
     Plug 'rafi/awesome-vim-colorschemes'
-    
     "Code Formatters
     Plug 'google/vim-codefmt'
     Plug 'google/vim-maktaba'
     Plug 'google/vim-glaive'     
+    " Snippets
+    Plug 'honza/vim-snippets' 
+    " Best theme duhh
+    Plug 'ayu-theme/ayu-vim'
+    " Rainbow brackets???
+    Plug 'luochen1990/rainbow'
+
    
 call plug#end()
