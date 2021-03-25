@@ -6,7 +6,7 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/themes/ayu_dark.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/themes/airline.vim
-
+source $HOME/.config/nvim/plug-config/rnvimr.vim
 
 "" Plugins Setup
 "call plug#begin(stdpath('data'))

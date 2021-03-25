@@ -1,0 +1,28 @@
+snippet tpl "CP Template" e
+#!/usr/bin/env python
+import sys
+from collections import *
+
+
+def solve():
+    pass
+
+
+def main():
+    T = inp()
+    for _ in range(T):
+        solve()
+
+
+def input(): return sys.stdin.readline().rstrip("\r\n")
+def st(): return list(sys.stdin.readline().strip())
+def li(): return list(map(int, sys.stdin.readline().split()))
+def mp(): return map(int, sys.stdin.readline().split())
+def inp(): return int(sys.stdin.readline())
+def pr(n): return sys.stdout.write(str(n)+"\n")
+def prl(n): return sys.stdout.write(str(n)+" ")
+
+
+if __name__ == "__main__":
+    main()
+endsnippet

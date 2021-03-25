@@ -37,6 +37,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     " Some more themes
     Plug 'rafi/awesome-vim-colorschemes'
     "Code Formatters
@@ -49,6 +50,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ayu-theme/ayu-vim'
     " Rainbow brackets???
     Plug 'luochen1990/rainbow'
+    " Startify
+    Plug 'mhinz/vim-startify'
 
    
 call plug#end()
