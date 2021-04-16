@@ -66,11 +66,9 @@ let g:fzf_action = {
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-map <leader>n :Files<CR>
-map <leader>b :Buffers<CR>
-nnoremap <leader>g :Rg<CR>
-nnoremap <leader>t :Tags<CR>
-nnoremap <leader>m :Marks<CR>
+" map <leader>n :Files<CR>
+" map <leader>b :Buffers<CR>
+" nnoremap <leader>g :Rg<CR>
 
 
 let g:fzf_tags_command = 'ctags -R'
@@ -128,13 +126,14 @@ command! -bang -nargs=* GGrep
 "Terminal options
 nnoremap \ :term<enter>:startinsert<enter>
 tnoremap <Esc> <C-\><C-n>
+tnoremap jk  <C-\><C-n>
 
 nnoremap <C-c> :bd<CR>
 
 
 " Compiling stuff
-nnoremap <F8> :!g++ -o %:r % <Enter>
-nnoremap <F9> :!g++ -o  %:r % <Enter> \| :!.%:r < %:r.input<Enter>
+" nnoremap <F8> :!g++ -o %:r % <Enter>
+" nnoremap <F9> :!g++ -o  %:r % <Enter> \| :!.%:r < %:r.input<Enter>
 
 
 
@@ -147,3 +146,26 @@ nnoremap ;; :Format<CR>
 au BufWrite * :Format
 
 nnoremap cpa <Esc>gg<S-v><S-g>y
+nnoremap ca <Esc>gg<S-v><S-g>
+
+noremap <leader>; :FloatermToggle<CR>
+tnoremap <leader>; <C-\><C-n>:FloatermToggle<CR>
+nnoremap <leader>q :FloatermKill<CR>
+
+" Find files using Telescope command-line sugar.
+" nnoremap <leader>n <cmd>Telescope find_files<cr>
+" nnoremap <leader>m <cmd>Telescope live_grep<cr>
+
+
+noremap <silent><f8> :AsyncTask file-run<cr>
+noremap <silent><f9> :AsyncTask file-build<cr>
+
+
+
+" Custom split stuff
+command -nargs=0 -bar Ioe :vsplit input | :split output | :vsplit expected | :vertical resize +42 | :wincmd h | :wincmd h | :vertical resize +84
+command -nargs=0 -bar Rsz :$ | :wincmd l | :wincmd l | :vertical resize +42 | :$ | :wincmd h | :wincmd h | :vertical resize +84
+
+
+nnoremap // :Ioe<cr>
+nnoremap <leader>m :Rsz<cr>

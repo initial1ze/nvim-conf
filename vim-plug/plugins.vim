@@ -52,6 +52,30 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'luochen1990/rainbow'
     " Startify
     Plug 'mhinz/vim-startify'
+    " Python thing
+    Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+    " Duhh
+    Plug 'liuchengxu/vista.vim'
+    " dense af
+    Plug 'dense-analysis/ale'
+    " dracula theme
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    " Codi
+    Plug 'metakirby5/codi.vim'
+    " Better indent
+    Plug 'vim-scripts/indentpython.vim'
+    " Floaterm
+    Plug 'voldikss/vim-floaterm'
+    " Spaceline
+    " Plug 'glepnir/spaceline.vim'
+    " Tabs and stuff
+    " Plug 'bagrat/vim-buffet'
+    " TELESCOPEE
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    " Code Runner
+    Plug 'skywind3000/asynctasks.vim'
+    Plug 'skywind3000/asyncrun.vim'
 
-   
 call plug#end()

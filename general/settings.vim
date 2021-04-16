@@ -37,7 +37,8 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 "set autochdir                           " Your working directory will always be the same as your working directory
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-
+" let g:pymode_warnings = 0
+let g:pymode = 0
 " You can't stop me
 cmap w!! w !sudo tee %
 
@@ -67,6 +68,5 @@ augroup autoformat_settings
   " autocmd FileType vue AutoFormatBuffer prettier
 augroup END
 
-
-
-
+let g:asyncrun_open = 6
+" let g:asynctasks_term_pos = 'external'
