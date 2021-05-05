@@ -163,7 +163,7 @@ noremap <silent><f9> :AsyncTask file-build<cr>
 
 
 " Custom split stuff
-command -nargs=0 -bar Ioe :vsplit input | :split output | :vsplit expected | :vertical resize +42 | :wincmd h | :wincmd h | :vertical resize +84
+command -nargs=0 -bar Ioe :vsplit input | :split output | :vsplit error | :vertical resize +42 | :wincmd h | :wincmd h | :vertical resize +84
 command -nargs=0 -bar Rsz :$ | :wincmd l | :wincmd l | :vertical resize +42 | :$ | :wincmd h | :wincmd h | :vertical resize +84
 
 
